@@ -1,3 +1,21 @@
 h2 {
-    text_aligin: center;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(79, 173, 255);
+	text-shadow: rgb(138, 230, 255) 1px 0 5px;
+}
+
+article {
+    padding: 5 px;
+    margin: 10px;
+    background:rgb(170, 197, 255);
+    border: 1px solid rgb(22, 22, 255);
+}
+
+img.sign {
+    float: right;
+    height: 100px;
+    margin: 10px 0 10px 10px;
 }
