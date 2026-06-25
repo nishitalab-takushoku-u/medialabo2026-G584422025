@@ -15,11 +15,13 @@ div.zentai {
     line-height: 1.6;
     */
     text-align: center;
+    flex-direction: row;
 }
 
 div.zentai > div {
 	padding: 30px;
 	background-color: #ffda45;
+    border: 1px solid rgb(255, 211, 35);
 }
 
 div {
@@ -29,5 +31,6 @@ div {
 article {
     padding: 10px;
     margin: 10px;
-    background:rgb(130, 245, 191)
+    background-color:rgb(130, 245, 191);
+    border: 1px solid rgb(0, 255, 60);
 }
