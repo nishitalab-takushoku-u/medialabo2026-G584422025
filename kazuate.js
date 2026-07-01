@@ -8,7 +8,8 @@ console.log('答え（デバッグ用）: ' + kotae);
 let kaisu = 0;
 
 // そのほか，必要に応じて変数を宣言してもよい
-let k,y,Y;
+let k,y,Y,R;
+let H=0;
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // ここから: 予想回数を1増やして，span#kaisu 要素のテキストを更新
@@ -27,11 +28,26 @@ function hantei() {
   
   // ここから: 正解判定する
   // 　　　　  正解/不正解のときのメッセージを表示する
+  if (kaisu<3) {
   if (Y===kotae) {
-    let H = document.querySelect('p#result');
+    R = '正解です. おめでとう!';
+    if(H>0) {
+      R = '答えは' + kotae + 'でした. すでにゲームは終わっています';
+    }
+    H += 1;
+  } else if (Y !== kotae && kaisu===3) {
+    R = 'まちがい.残念でした答えは' + kotae + 'です.';
+  } else if (Y !== kotae && yoso<kotae) {
+    R = 'まちがい. 答えはもっと大きいですよ';
+  } else if (Y !== kotae && yoso>kotae) {
+    R = 'まちがい. 答えはもっと小さいですよ';
   }
-  // ここまで: 正解判定する
+  } else {
+    R = '答えは' + kotae + 'でした. すでにゲームは終わっています';
+  }
+  document.querySelector('p#result').textContent = R;
 }
+  // ここまで: 正解判定する
 
 // ここから: ボタンを押した時のイベントハンドラとして hantei を登録
 b = document.querySelector('button#print');
