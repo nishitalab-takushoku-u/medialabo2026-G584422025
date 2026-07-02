@@ -29,6 +29,6 @@ console.log(n[2]);			// n は配列ではない
 let obj2 = {
 	mem1: {x:4, y:9},
 	mem2: "abc"
-};
+}
 console.log(obj2.mem0.x);   // obj2.mem0 は存在しない. さらにそのメンバー x を参照しようとする
 

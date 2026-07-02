@@ -1,17 +1,9 @@
-let b = document.querySelector('#answer');
+let b = document.querySelector('#btn');
 b.addEventListener('click', printAnswer);
 
 function printAnswer() {
-    let rs = document.querySelectorAll('input[name="year"]');
-    
-    for(let r of rs) {
-        if(r.checked) { //rが選択されていたら
-            console.log(r.value);
-        }
-    }
-
     //name属性がhobbyのinput要素を全て検索
-    let cs = document.querySelectorSelectorAll('input[name="hobby"]');
+    let cs = document.querySelectorSelectorAll('input[name="info"]');
     
     for(let c of cs) {
         if(c.checked) {
