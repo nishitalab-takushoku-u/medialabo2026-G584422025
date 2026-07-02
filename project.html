@@ -5,11 +5,66 @@
     <title>世界の天気</title>
     <link rel="stylesheet" href="project.css">
     <script src="weather.js" defer></script>
+    <script src="project.js" defer></script>
   </head>
   <body>
     <div class="zentai">
     <h2>世界の天気情報(検索結果は1件)<img class="sign" src="cloudy.png" alt="曇りの天気" width="100"></h2>
     <article>
+      <label for="city">都市名: </label>
+      <select name="city" id="city">
+        <option value="">都市を一つ選んでください</option>
+        <option value="Cairo">カイロ (エジプト)</option>
+        <option value="Moscow">モスクワ (ロシア)</option>
+        <option value="Johannesburg">ヨハネスブルク (南アフリカ)</option>
+        <option value="Beijing">北京 (中華人民共和国)</option>
+        <option value="Tokyo">東京 (日本)</option>
+        <option value="Singapore">シンガポール</option>
+        <option value="Sydney">シドニー (オーストラリア)</option>
+        <option value="London">ロンドン (イギリス)</option>
+        <option value="Paris">パリ (フランス)</option>
+        <option value="Rio de Janeiro">リオデジャネイロ (ブラジル)</option>
+        <option value="New York">ニューヨーク (アメリカ合衆国)</option>
+        <option value="Los Angeles">ロサンゼルス (アメリカ合衆国)</option>
+      </select>
+      <div>
+        <!-- ここにテキストボックスとボタンを設置 -->
+      <div>
+         <input type="checkbox" name="info" id="lon" value="lon">
+         <label for="lon">緯度</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="lat" value="lat">
+         <label for="lat">経度</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="desctiption" value="description">
+         <label for="descriotion">天気</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="min" value="min">
+         <label for="min">最低気温</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="max" value="max">
+         <label for="max">最高気温</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="humidity" value="humidity">
+         <label for="humidity">湿度</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="speed" value="speed">
+         <label for="speed">風速</label>
+        </div>
+        <div>
+         <input type="checkbox" name="info" id="deg" value="deg">
+         <label for="deg">風向</label>
+        </div>
+         <button id="btn">検索</button>
+        </div>
+        </article>
+      </p>
     <ul>
       <li>緯度:51.5078</li>
       <li>経度:0</li>
@@ -20,7 +75,6 @@
       <li>風速:4.47m/s</li>
       <li>都市名:ロンドン</li>
     </ul>
-    </article>
     </div>
   </body>
 </html>
